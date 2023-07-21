@@ -4,6 +4,7 @@ let phone = document.querySelector('#phone')
 let form = document.querySelector('.inputform');
 
 let newnameofuser = document.querySelector('#newnames')
+let delete_user_old = document.querySelector('#deleteuser')
 let oldnameofuser = document.querySelector('#oldnames')
 let newemail = document.querySelector('#newemail')
 let newphone = document.querySelector('#newphone')
@@ -24,7 +25,7 @@ update.addEventListener('click', () => {
 });
 
 delete_user.addEventListener('click', () => {
-    window.localStorage.removeItem(nameofuser.value);
+    window.localStorage.removeItem(delete_user_old.value);
 });
 
 

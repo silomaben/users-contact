@@ -4,6 +4,7 @@ let phone = document.querySelector('#phone')
 let form = document.querySelector('.inputform');
 
 let newnameofuser = document.querySelector('#newnames')
+let oldnameofuser = document.querySelector('#oldnames')
 let newemail = document.querySelector('#newemail')
 let newphone = document.querySelector('#newphone')
 // let form = document.querySelector('.inputform');
@@ -14,12 +15,11 @@ let delete_user = document.querySelector('#delete')
 
 
 update.addEventListener('click', () => {
-    window.localStorage.removeItem(nameofuser.value);
+    window.localStorage.removeItem(oldnameofuser.value);
 
     const user = new User(newnameofuser.value , newemail.value,newphone.value );    
     localStorage.setItem(newnameofuser.value, JSON.stringify(user));
-    
-    
+
 
 });
 
